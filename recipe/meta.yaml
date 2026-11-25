@@ -1,18 +1,18 @@
 {% set name = "jinja2-humanize-extension" %}
-{% set version = "0.4.0" %}
+{% set version = "0.4.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/jinja2_humanize_extension-{{ version }}.tar.gz
-  sha256: e7d69b1c20f32815bbec722330ee8af14b1287bb1c2b0afa590dbf031cadeaa0
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/jinja2_humanize_extension-{{ version }}.tar.gz
+  sha256: 241c191ac8087d3c187042dd471c3ecefb40aaed99318c4070f9b57ddefbc022
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
